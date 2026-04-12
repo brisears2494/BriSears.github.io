@@ -148,9 +148,7 @@ nav {
   border-top: 1px solid var(--border);
 }
 
-.case-studies:first-of-type .case-study-card {
-  border-top: none;
-}
+.case-studies:first-of-type 
 
 .case-studies {
   padding: 0 var(--gutter);
@@ -163,9 +161,8 @@ nav {
   margin: 0 auto;
 }
 
-.case-study-card:first-child { border-top: 1px solid var(--border); }
-.case-study-card:nth-child(even) { direction: rtl; }
-.case-study-card:nth-child(even) > * { direction: ltr; }
+
+
 
 /* Case study image/preview panel */
 .cs-preview {
@@ -178,6 +175,40 @@ nav {
   align-items: center;
   justify-content: center;
 }
+
+.cs-preview--tabs {
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: auto;
+  min-height: 420px;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0;
+  overflow: hidden;
+}
+
+.cs-preview--tabs .cs-tab-panel {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-flipbook-preview {
+  position: relative;
+  background: var(--paper);
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+
 
 .cs-preview-inner {
   width: 75%;
@@ -476,9 +507,7 @@ nav {
   background: var(--paper);
 }
 
-.cs-alt-bg .case-study-card {
-  border-top: none;
-}
+.cs-alt-bg 
 
 /* Wireframe preview */
 .cs-wireframe-preview {
@@ -870,15 +899,7 @@ nav {
 .cs-aar-line.short { width: 55%; }
 
 /* Tab panel (CS3) */
-.cs-tab-panel {
-  position: relative;
-  background: var(--paper);
-  border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 420px;
-}
+
 
 .cs-tabs {
   display: flex;
@@ -1187,6 +1208,7 @@ nav {
   /* Footer */
   .site-footer { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
 }
+@media (max-width: 860px) { .case-studies { padding-left: 5vw !important; padding-right: 5vw !important; } }
 </style>
 </head>
 <body>
@@ -1269,7 +1291,7 @@ nav {
 
     <!-- CASE STUDY 2: Volunteer Fundraising -->
     <div class="case-study-card">
-      <div class="cs-preview cs-flipbook-preview" style="background: var(--paper); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.75rem;">
+      <div class="cs-preview cs-flipbook-preview">
         <div class="cs-flipbook-spread">
           <!-- Left page -->
           <div class="cs-spread-left">
@@ -1309,12 +1331,9 @@ nav {
             <div class="cs-ps"></div>
           </div>
         </div>
-        <span class="cs-badge" style="position:relative; top:auto; left:auto; display:inline-block;">Case Study 02</span>
-        <a href="https://drive.google.com/file/d/1tKF51xjaD8mOFbdJzApOONVe1_s9coIz/preview" target="_blank" class="cs-view-btn" style="position:relative; bottom:auto; right:auto;">View PDF →</a>
+        <span class="cs-badge">Case Study 02</span>
+        <a href="https://drive.google.com/file/d/1tKF51xjaD8mOFbdJzApOONVe1_s9coIz/preview" target="_blank" class="cs-view-btn">View PDF →</a>
       </div>
-    </div>
-
-   
 
       <div class="cs-content">
         <span class="cs-tag">Digital Campaign</span>
@@ -1354,9 +1373,19 @@ nav {
           </div>
         </div>
       </div>
- <!-- CASE STUDY 3: Landing Page -->
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CASE STUDY 3: Landing Page -->
+<div class="case-studies">
+  <div class="case-studies-inner">
     <div class="case-study-card">
-      <div class="cs-tab-panel">
+
+      <div class="cs-preview cs-preview--tabs">
+        <div class="cs-tab-panel">
 
         <!-- Tab buttons -->
         <div class="cs-tabs">
@@ -1453,6 +1482,7 @@ nav {
         </div>
 
       </div>
+      </div>
 
       <div class="cs-content">
         <span class="cs-tag">Brand Strategy</span>
@@ -1482,6 +1512,7 @@ nav {
             <p class="cs-block-body">Project currently in progress. The redesign addresses long-standing gaps in differentiation and content quality — outcomes to be measured upon launch.</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
 
@@ -1678,4 +1709,7 @@ function switchTab(btn, tabId) {
 }
 </script>
 </body>
-</html>
+</html
+
+  </div>
+</div>>
